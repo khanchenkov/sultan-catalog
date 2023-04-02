@@ -2,7 +2,6 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
-  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "../util/ScrollToTop";
 import CatalogPage from "./CatalogPage/CatalogPage";
