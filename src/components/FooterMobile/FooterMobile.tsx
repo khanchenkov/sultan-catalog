@@ -69,16 +69,16 @@ const FooterMobile = () => {
           <h4>Меню сайта</h4>
           <ul>
             <li>
-              <a href="#">О компании</a>
+              <a href="/">О компании</a>
             </li>
             <li>
-              <a href="#">Доставка и оплата</a>
+              <a href="/">Доставка и оплата</a>
             </li>
             <li>
-              <a href="#">Возврат</a>
+              <a href="/">Возврат</a>
             </li>
             <li>
-              <a href="#">Контакты</a>
+              <a href="/">Контакты</a>
             </li>
           </ul>
         </div>
@@ -86,19 +86,19 @@ const FooterMobile = () => {
           <h4>Категории:</h4>
           <ul>
             <li>
-              <a href="#">Бытовая химия</a>
+              <a href="/">Бытовая химия</a>
             </li>
             <li>
-              <a href="#">Косметика и гигиена</a>
+              <a href="/">Косметика и гигиена</a>
             </li>
             <li>
-              <a href="#">Товары для дома</a>
+              <a href="/">Товары для дома</a>
             </li>
             <li>
-              <a href="#">Товары для детей и мам</a>
+              <a href="/">Товары для детей и мам</a>
             </li>
             <li>
-              <a href="#">Посуда</a>
+              <a href="/">Посуда</a>
             </li>
           </ul>
         </div>
@@ -119,12 +119,12 @@ const FooterMobile = () => {
             </span>
             <ul>
               <li>
-                <a href="#">
+                <a href="/">
                   <img src={whatsupIcon} alt="Whats App" />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="/">
                   <img src={telegramIcon} alt="Telegram" />
                 </a>
               </li>

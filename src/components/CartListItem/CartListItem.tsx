@@ -14,7 +14,6 @@ const CartListItem: FC<CartItem> = ({ item, amount }) => {
     name,
     brand_name,
     image_url,
-    barcode,
     size,
     price,
     description,

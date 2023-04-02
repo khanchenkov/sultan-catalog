@@ -1,6 +1,4 @@
 import "./CareTypePanel.scss";
-import { useAppDispatch } from "../../hooks/redux";
-import { productSlice } from "../../store/reducers/ProductSlice";
 import { FC } from "react";
 
 interface ICareTypePanel {
@@ -14,9 +12,6 @@ const CareTypePanel: FC<ICareTypePanel> = ({
   careTypes,
   currentCareType,
 }) => {
-  // const dispatch = useAppDispatch();
-  // const { filterByCareType } = productSlice.actions;
-
 
   const typeCareButtonHandler = (careType: string) => {
     if (careType === currentCareType) {

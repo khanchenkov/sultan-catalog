@@ -27,7 +27,7 @@ const HeaderContacts = () => {
             />
           </svg>
           <div>
-            <a href="#">г. Кокчетав, ул. Ж. Ташенова 129Б</a>
+            <a href="/">г. Кокчетав, ул. Ж. Ташенова 129Б</a>
             <span>(Рынок Восточный)</span>
           </div>
         </div>
@@ -53,16 +53,16 @@ const HeaderContacts = () => {
       <nav className="header__links">
         <ul>
           <li>
-            <a href="#">О компании</a>
+            <a href="/">О компании</a>
           </li>
           <li>
-            <a href="#">Доставка и оплата</a>
+            <a href="/">Доставка и оплата</a>
           </li>
           <li>
-            <a href="#">Возврат</a>
+            <a href="/">Возврат</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a href="/">Контакты</a>
           </li>
         </ul>
       </nav>

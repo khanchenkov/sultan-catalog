@@ -12,12 +12,12 @@ const Breadcrumbs: FC<IBreadcrumbs> = ({ routes }) => {
         <div className="breadcrumbs__wrapper">
           <ul>
             <li>
-              <a href="#">Главная</a>
+              <a href="/">Главная</a>
             </li>
             {routes &&
               routes.map((item: string, id) => (
                 <li key={id}>
-                  <a href="#">{item}</a>
+                  <a href="/">{item}</a>
                 </li>
               ))}
           </ul>

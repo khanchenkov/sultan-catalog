@@ -2,7 +2,6 @@ import ProductListItem from "../ProductListItem/ProductListItem";
 import { FC, useState } from "react";
 import { Product } from "../../types/Interfaces";
 import "./ProductList.scss";
-import { useAppSelector } from "../../hooks/redux";
 import Pagination from "../Pagination/Pagination";
 
 interface IProductList {
@@ -11,7 +10,7 @@ interface IProductList {
 
 const ProductList: FC<IProductList> = ({ products }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const [productsPerPage, setProductsPerPage] = useState<number>(15);
+  const [productsPerPage] = useState<number>(15);
 
   const lastProductIndex = currentPage * productsPerPage;
   const firstProductIndex = lastProductIndex - productsPerPage;

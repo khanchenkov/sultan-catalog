@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { useAppSelector, useAppDispatch } from "../../hooks/redux";
+import { useAppDispatch } from "../../hooks/redux";
 import "./AdminPage.scss";
 import { Product } from "../../types/Interfaces";
 import AdminProduct from "../../components/AdminProduct/AdminProduct";
@@ -8,7 +8,6 @@ import { productSlice } from "../../store/reducers/ProductSlice";
 import AddNewProductItem from "../../components/AddNewProduct/AddNewProductItem";
 
 const AdminPage = () => {
-  const { products } = useAppSelector((state) => state.productReducer);
   const dispatch = useAppDispatch();
   const { removeProductById, addProduct } = productSlice.actions;
 
@@ -19,7 +18,9 @@ const AdminPage = () => {
   const lsData = JSON.parse(lsDataString || "[]");
 
   useEffect(() => {
-    setProductsList(lsData);
+    const lsDataStringCheck: string | null = localStorage.getItem("products");
+    const lsDataCheck = JSON.parse(lsDataStringCheck || "[]");
+    setProductsList(lsDataCheck);
   }, []);
 
   const removeProduct = (id: number) => {
