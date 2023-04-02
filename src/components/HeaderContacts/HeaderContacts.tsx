@@ -1,4 +1,5 @@
 import "./HeaderContacts.scss";
+import { Link } from "react-router-dom";
 
 const HeaderContacts = () => {
   return (
@@ -53,7 +54,7 @@ const HeaderContacts = () => {
       <nav className="header__links">
         <ul>
           <li>
-            <a href="/">О компании</a>
+            <Link to="/admin">Админка</Link>
           </li>
           <li>
             <a href="/">Доставка и оплата</a>
