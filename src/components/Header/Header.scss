@@ -1,0 +1,10 @@
+@import "../../styles/vars";
+
+.header {
+  hr {
+    border: none;
+    color: $divider-color;
+    background-color: $divider-color;
+    height: 1px;
+  }
+}

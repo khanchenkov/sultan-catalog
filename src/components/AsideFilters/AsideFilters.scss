@@ -1,0 +1,155 @@
+@import "../../styles/vars";
+
+.aside-filters {
+  h3 {
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-color;
+    margin-bottom: 13px;
+  }
+  h4 {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+  &__price {
+    margin-bottom: 30px;
+    & > span {
+      display: block;
+      color: $addition-text-color;
+      margin-bottom: 16px;
+      font-weight: 300;
+      b {
+        font-weight: 700;
+        color: $text-color;
+      }
+    }
+    & > div {
+      span {
+        font-weight: bold;
+      }
+      input {
+        background-color: rgba(255, 198, 80, 0.3);
+        border: none;
+        width: 100px;
+        height: 23px;
+        border-radius: 1000px;
+        text-align: center;
+        &:first-child {
+          margin-right: 10px;
+        }
+        &:last-child {
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+  &__caretype {
+    border-bottom: 1px dashed $divider-color;
+    padding-bottom: 20px;
+    ul {
+      li {
+        margin-bottom: 10px;
+        &.active {
+          button {
+            font-weight: bold;
+          }
+        }
+        button {
+          padding: 0;
+          border: none;
+          background-color: transparent;
+          font-size: 14px;
+          color: $addition-text-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.manufacturer-filter {
+  margin-bottom: 20px;
+  &__search-input {
+    background-color: $button-bg;
+    position: relative;
+    border-radius: 30px;
+    padding: 12px 20px;
+    width: 240px;
+    height: 60px;
+    margin-bottom: 15px;
+    input {
+      background-color: transparent;
+      outline: none;
+      height: 35px;
+      font-size: 12px;
+      border: 0;
+      width: 100%;
+    }
+    button {
+      padding: 5px 0 0 2px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      background-color: $button-color;
+      border-radius: 50%;
+      border: 0;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+  &__list {
+    border-bottom: 1px dashed $divider-color;
+    padding-bottom: 20px;
+    ul {
+      margin-bottom: 15px;
+      li {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+        &.hidden {
+          display: none;
+        }
+        input {
+          margin-right: 10px;
+          cursor: pointer;
+        }
+        span {
+          margin-right: 10px;
+          font-size: 14px;
+          color: $addition-text-color;
+          &:last-child {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    button {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      font-size: 12px;
+      color: $addition-text-color;
+      font-weight: 500;
+      cursor: pointer;
+      &.clicked {
+        &::after {
+          transform: rotate(180deg);
+          top: 3px;
+        }
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: -5px;
+        top: 6px;
+        border: 3px solid transparent;
+        border-top: 5px solid $addition-text-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "../../styles/vars";
+
+.admin-product {
+  @include flex-list;
+  padding: 20px 0px;
+  border-bottom: 1px dashed $divider-color;
+  span {
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="number"],
+  select {
+    border-radius: 5px;
+    border: 1px solid $divider-color;
+    margin-left: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  &__image {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 300px;
+      margin-bottom: 5px;
+    }
+    input {
+      width: 300px;
+    }
+  }
+  &__description {
+    margin-bottom: 10px;
+    span {
+      display: block;
+      margin-bottom: 5px;
+    }
+    textarea {
+      border-radius: 5px;
+      border: 1px solid $divider-color;
+      padding: 5px;
+      width: 400px;
+      height: 100px;
+      resize: none;
+    }
+  }
+  &__care-type {
+    span {
+      display: block;
+      margin-bottom: 5px;
+    }
+    input {
+      margin: 0;
+      cursor: pointer;
+      margin-right: 5px;
+    }
+    p {
+      margin-bottom: 5px;
+    }
+  }
+  &__buttons {
+    button {
+      cursor: pointer;
+      padding: 10px;
+      color: $main-color;
+      border: none;
+      border-radius: 5px;
+    }
+    button {
+      &:first-child {
+        background-color: $button-color;
+        margin-right: 10px;
+      }
+      &:last-child {
+        background-color: #b7410e;
+        font-weight: bold;
+      }
+    }
+  }
+  &__validation {
+    color: red;
+    font-size: 14px;
+  }
+}

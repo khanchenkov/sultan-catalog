@@ -1,0 +1,236 @@
+@import "../../styles/vars.scss";
+
+.footer {
+  background-color: $addition-text-color;
+  padding: 70px 0 115px;
+  color: $main-color;
+  h4 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 25px;
+  }
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  &__description {
+    svg {
+      margin-bottom: 15px;
+    }
+    p {
+      width: 310px;
+      font-size: 16px;
+      line-height: 1.5;
+      margin-bottom: 45px;
+      font-weight: 100;
+    }
+    span {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 12px;
+    }
+  }
+
+  &__email-dist {
+    background-color: $button-bg;
+    position: relative;
+    border-radius: 30px;
+    padding: 12px 20px;
+    width: 280px;
+    height: 60px;
+    input {
+      background-color: transparent;
+      outline: none;
+      height: 35px;
+      font-size: 12px;
+      border: 0;
+      width: 100%;
+    }
+    button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      padding-top: 12px;
+      background-color: $button-color;
+      border-radius: 50%;
+      border: 0;
+      color: #fff;
+      width: 40px;
+      height: 40px;
+      outline: 0;
+    }
+  }
+  &__nav,
+  &__categories {
+    ul {
+      li {
+        margin-bottom: 20px;
+        a {
+          text-decoration: none;
+          color: $main-color;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+  &__price-list {
+    button {
+      width: 215px;
+      background-color: $button-color;
+      border: none;
+      border-radius: 80px;
+      margin-bottom: 20px;
+      height: 60px;
+      color: $main-color;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg {
+        margin-left: 12px;
+      }
+    }
+    span {
+      display: block;
+      margin-bottom: 15px;
+      font-size: 15px;
+    }
+    ul {
+      display: flex;
+      li {
+        margin-right: 10px;
+      }
+    }
+  }
+  &__support {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 25px;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $main-color;
+      margin-bottom: 9px;
+      font-size: 14px;
+    }
+    span {
+      margin-bottom: 9px;
+      color: $main-color;
+      font-size: 12px;
+    }
+    button {
+      display: inline-block;
+      font-size: 10px;
+      padding: 0px;
+      border: none;
+      background-color: transparent;
+      color: $main-color;
+      border-bottom: 1px solid $main-color;
+    }
+  }
+  &__payment {
+    div {
+      margin-bottom: 25px;
+      a {
+        display: block;
+        text-decoration: none;
+        color: $main-color;
+        font-weight: 600;
+        margin-bottom: 3px;
+      }
+      span {
+        font-size: 12px;
+        color: $main-color;
+        font-weight: 300;
+      }
+    }
+    ul {
+      display: flex;
+      li {
+        margin-right: 5px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .footer {
+    padding: 15px 0px;
+    p {
+      margin-bottom: 15px;
+    }
+    &__mobile-header {
+      @include flex-list;
+      margin-bottom: 15px;
+    }
+    &__email-dist {
+      width: 100%;
+      max-width: 300px;
+      button {
+        padding-top: 6px;
+      }
+    }
+    &__price-list {
+      button {
+        font-size: 12px;
+        width: 150px;
+        height: 40px;
+        margin: 0;
+      }
+    }
+    &__subscription {
+      margin-bottom: 30px;
+      span {
+        display: block;
+        margin-bottom: 15px;
+      }
+    }
+    &__menus {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      h4 {
+        font-size: 20px;
+      }
+      ul {
+        li {
+          a {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+    &__contacts {
+      & > div {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__support {
+      
+    }
+    &__socials {
+      // margin-left: 40px;
+      span {
+        font-size: 14px;
+        display: block;
+        margin-bottom: 15px;
+      }
+      ul {
+        display: flex;
+        li {
+          margin-right: 10px;
+        }
+      }
+    }
+    &__payment {
+      display: flex;
+      flex-direction: column;
+      div {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+@import "../../styles/vars";
+
+.pagintaion {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+  ul {
+    display: flex;
+    align-items: center;
+    margin: 0 35px 0;
+    li {
+      button {
+        width: 35px;
+        height: 35px;
+        color: $addition-text-color;
+        border-radius: 50%;
+        font-weight: bold;
+        &.active {
+          background-color: $increase-button-color;
+        }
+      }
+    }
+  }
+}

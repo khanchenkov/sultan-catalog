@@ -1,0 +1,15 @@
+$main-color: #ffffff;
+$addition-text-color: #3f4e65;
+$text-color: #111111;
+$divider-color: #d9dce0;
+$button-color: #ffc85e;
+$button-bg: #ededed;
+$instock: #1fd85d;
+$increase-button-color: rgba(254, 202, 110, 0.3);
+
+// mixins
+@mixin flex-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

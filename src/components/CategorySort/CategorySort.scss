@@ -1,0 +1,55 @@
+@import "../../styles/vars";
+
+.category-sort {
+  margin-bottom: 25px;
+  &__wrapper {
+    @include flex-list;
+    h2 {
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $text-color;
+      font-size: 40px;
+    }
+  }
+  &__sorting {
+    span {
+      color: $text-color;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    button {
+      position: relative;
+      background-color: transparent;
+      border: none;
+      color: $addition-text-color;
+      cursor: pointer;
+      font-size: 16px;
+      padding-right: 10px;
+      margin-right: 5px;
+      &.active {
+        font-weight: bold;
+      }
+      &.asc {
+        &::after {
+          visibility: visible;
+          transform: rotate(180deg);
+          top: 5px;
+        }
+      }
+      &.desc {
+        &::after {
+          visibility: visible;
+        }
+      }
+      &::after {
+        visibility: hidden;
+        content: "";
+        position: absolute;
+        right: 0px;
+        top: 10px;
+        border: 3px solid transparent;
+        border-top: 5px solid $addition-text-color;
+      }
+    }
+  }
+}

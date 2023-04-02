@@ -1,0 +1,47 @@
+@import "../../styles/vars.scss";
+
+.header {
+  &__mobile-wrapper {
+    padding: 10px 0;
+    @include flex-list;
+    button {
+      background-color: $button-color;
+      border: none;
+      border-radius: 80px;
+      width: 30px;
+      height: 30px;
+      color: $main-color;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .cart {
+      width: auto;
+    }
+  }
+  &__mobile-panel {
+    padding: 9px 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid $divider-color;
+    border-bottom: 1px solid $divider-color;
+    div {
+        height: 30px;
+      border-right: 1px dashed $divider-color;
+    }
+    button {
+      border: none;
+      background: transparent;
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+      color: $addition-text-color;
+      svg {
+        margin-right: 6px;
+      }
+    }
+  }
+}

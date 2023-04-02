@@ -1,0 +1,91 @@
+@import "../../styles/vars";
+
+.cart-list-item {
+  display: flex;
+  align-items: center;
+  padding: 55px 0;
+  border-top: 1px dashed $divider-color;
+  &:last-child {
+    border-bottom: 1px dashed $divider-color;
+    margin-bottom: 50px;
+  }
+  img {
+    width: 280px;
+  }
+  &__about {
+    width: 500px;
+  }
+  &__size {
+    margin-bottom: 10px;
+    color: $addition-text-color;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    svg {
+      margin-right: 7px;
+    }
+  }
+  &__name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+  }
+  &__description {
+    color: $addition-text-color;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 1.5;
+    width: 450px;
+  }
+  &__amount {
+    display: flex;
+    align-items: center;
+    div {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+      border-left: 1px dashed $divider-color;
+      border-right: 1px dashed $divider-color;
+      height: 50px;
+      padding: 0 44px;
+      button {
+        border: none;
+        background-color: $increase-button-color;
+        color: $addition-text-color;
+        width: 34px;
+        height: 23px;
+        border-radius: 1000px;
+        cursor: pointer;
+      }
+      span {
+        color: $addition-text-color;
+        margin: 0 18px 0;
+        font-weight: 500;
+      }
+    }
+    p {
+      width: 230px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 30px;
+      color: $text-color;
+      border-right: 1px dashed $divider-color;
+      height: 50px;
+      line-height: 50px;
+      padding-right: 44px;
+      margin-right: 42px;
+    }
+  }
+  &__remove {
+    button {
+      border: none;
+      background-color: $button-color;
+      height: 60px;
+      width: 60px;
+      border-radius: 80px;
+      cursor: pointer;
+      padding-top: 4px;
+    }
+  }
+}

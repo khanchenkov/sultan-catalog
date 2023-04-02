@@ -1,0 +1,167 @@
+@import "../../styles/vars.scss";
+
+.header {
+  &__panel {
+    padding: 10px 0;
+    @include flex-list;
+  }
+  &__catalog-button,
+  &__price-list {
+    background-color: $button-color;
+    border: none;
+    border-radius: 80px;
+    height: 60px;
+    color: $main-color;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg {
+      margin-left: 12px;
+    }
+  }
+  &__catalog-button {
+    width: 190px;
+  }
+  &__price-list {
+    width: 200px;
+  }
+  &__logo {
+    cursor: pointer;
+  }
+}
+
+.support {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin-right: 14px;
+    padding-top: 10px;
+    a {
+      text-decoration: none;
+      font-weight: bold;
+      color: $text-color;
+      margin-bottom: 9px;
+      font-size: 14px;
+    }
+    span {
+      margin-bottom: 9px;
+      color: $addition-text-color;
+      font-size: 12px;
+    }
+    button {
+      display: inline-block;
+      font-size: 10px;
+      padding: 0px;
+      border: none;
+      background-color: transparent;
+      color: $addition-text-color;
+      border-bottom: 1px solid $addition-text-color;
+    }
+  }
+  &__activity {
+    position: absolute;
+    top: 27px;
+    right: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #f0f6fa;
+    border-radius: 50%;
+    div {
+      width: 8px;
+      height: 8px;
+      background-color: #1fd85d;
+      border-radius: 50%;
+    }
+  }
+}
+
+.cart {
+  @include flex-list;
+  &__icon {
+    position: relative;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  &__counter {
+    background-color: $main-color;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    position: absolute;
+    display: flex;
+    top: -8px;
+    right: -12px;
+    div {
+      margin: auto;
+      background-color: $button-color;
+      color: $main-color;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      padding: 4.2px 0 0 6.5px;
+    }
+  }
+  &__sum {
+    span {
+      display: block;
+      font-size: 12px;
+      margin-bottom: 5px;
+      color: $addition-text-color;
+    }
+    p {
+      font-weight: bold;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .header {
+    &__panel {
+      display: grid;
+      grid-template-columns: 230px 190px 300px;
+    }
+    &__catalog-button,
+    &__price-list {
+      width: 190px;
+    }
+  }
+  .cart {
+    width: 255px;
+    justify-content: flex-end;
+  }
+}
+
+.search-input {
+  background-color: $button-bg;
+  position: relative;
+  border-radius: 30px;
+  padding: 12px 20px;
+  width: 263px;
+  height: 60px;
+  input {
+    background-color: transparent;
+    outline: none;
+    height: 35px;
+    font-size: 12px;
+    border: 0;
+    width: 100%;
+  }
+  button {
+    padding: 5px 0 0 2px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: $button-color;
+    border-radius: 50%;
+    border: 0;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    outline: 0;
+  }
+}
