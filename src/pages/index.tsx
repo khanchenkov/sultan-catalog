@@ -16,7 +16,7 @@ const Pages = () => {
     <Router>
       <ScrollToTop />
       <Routes>
-        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/" element={<CatalogPage />} />
         <Route path="/product/:barcode" element={<ProductPage />} />
         <Route path="/cart" element={<CartPage />} />
         <Route path="/admin" element={<AdminPage />} />
