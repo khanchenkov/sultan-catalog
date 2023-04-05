@@ -1,11 +1,7 @@
 import "./CareTypePanel.scss";
 import { FC } from "react";
+import { ICareTypePanel } from "../../types/Interfaces";
 
-interface ICareTypePanel {
-  setCurrentCareType: any;
-  careTypes: string[];
-  currentCareType: string;
-}
 
 const CareTypePanel: FC<ICareTypePanel> = ({
   setCurrentCareType,

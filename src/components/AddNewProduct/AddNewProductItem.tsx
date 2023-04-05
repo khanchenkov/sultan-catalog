@@ -1,13 +1,12 @@
 import { useState, FC } from "react";
 import { Product } from "../../types/Interfaces";
+import { useAppSelector } from "../../hooks/redux";
 import "./AddNewProduct.scss";
-
-interface IAddNewProduct {
-  addNewProduct: (product: Product) => void;
-  lastId: number;
-}
+import { IAddNewProduct } from "../../types/Interfaces";
 
 const AddNewProductItem: FC<IAddNewProduct> = ({ addNewProduct, lastId }) => {
+  const { careTypes } = useAppSelector((state) => state.productReducer);
+
   const [imageUrl, setImageUrl] = useState<string>("");
   const [productName, setProductName] = useState<string>("");
   const [brandName, setBrandName] = useState<string>("");
@@ -20,14 +19,6 @@ const AddNewProductItem: FC<IAddNewProduct> = ({ addNewProduct, lastId }) => {
   const [productCareTypes, setProductCareTypes] = useState<string[]>([]);
 
   const [validationError, setValidationError] = useState<boolean>(false);
-
-  const careTypes = [
-    "Уход за телом",
-    "Уход за руками",
-    "Уход за ногами",
-    "Уход за лицом",
-    "Уход за волосами",
-  ];
 
   const addCareTypeToList = (e: any, careType: string) => {
     if (e.target.checked) {

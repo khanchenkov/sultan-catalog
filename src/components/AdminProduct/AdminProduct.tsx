@@ -1,25 +1,16 @@
 import { FC, useState } from "react";
 import { Product } from "../../types/Interfaces";
 import "./AdminProduct.scss";
-
-interface IAdminProduct {
-  item: Product;
-  removeProduct: (id: number) => void;
-  editProductItem: (product: Product) => void;
-}
+import { useAppSelector } from "../../hooks/redux";
+import { IAdminProduct } from "../../types/Interfaces";
 
 const AdminProduct: FC<IAdminProduct> = ({
   item,
   removeProduct,
   editProductItem,
 }) => {
-  const careTypes = [
-    "Уход за телом",
-    "Уход за руками",
-    "Уход за ногами",
-    "Уход за лицом",
-    "Уход за волосами",
-  ];
+  const { careTypes } = useAppSelector((state) => state.productReducer);
+
   const {
     image_url,
     name,

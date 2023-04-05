@@ -11,16 +11,11 @@ import { useState, useEffect } from "react";
 import { useAppSelector } from "../../hooks/redux";
 
 const CatalogPage = () => {
-  const { products } = useAppSelector((state) => state.productReducer);
+  const { products, careTypes } = useAppSelector(
+    (state) => state.productReducer
+  );
   const [productsList, setProductsList] = useState<Product[]>([]);
   const [currentCareType, setCurrentCareType] = useState<string>("");
-  const careTypes = [
-    "Уход за телом",
-    "Уход за руками",
-    "Уход за ногами",
-    "Уход за лицом",
-    "Уход за волосами",
-  ];
   const [currentMinPrice, setCurrentMinPrice] = useState<string>("");
   const [currentMaxPrice, setCurrentMaxPrice] = useState<string>("");
   const [currentBrands, setCurrentBrands] = useState<string[]>([]);

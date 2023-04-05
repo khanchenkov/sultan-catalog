@@ -4,6 +4,7 @@ import { CartItem } from "../../types/Interfaces";
 import defineSize from "../../util/DefineSize";
 import { useAppDispatch } from "../../hooks/redux";
 import { productSlice } from "../../store/reducers/ProductSlice";
+import { editPrice } from "../../util/EditPrice";
 
 const CartListItem: FC<CartItem> = ({ item, amount }) => {
   const dispatch = useAppDispatch();
@@ -28,14 +29,6 @@ const CartListItem: FC<CartItem> = ({ item, amount }) => {
       croppedText.pop();
       const newText = croppedText.join(" ");
       return newText + " ...";
-    }
-  };
-
-  const editPrice = (fullPrice: number) => {
-    if (Number.isInteger(fullPrice)) {
-      return fullPrice + " ₸";
-    } else {
-      return (fullPrice.toFixed(2) + "").replace(".", ",") + " ₸";
     }
   };
 

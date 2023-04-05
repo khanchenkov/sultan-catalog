@@ -3,10 +3,7 @@ import { FC, useState } from "react";
 import { Product } from "../../types/Interfaces";
 import "./ProductList.scss";
 import Pagination from "../Pagination/Pagination";
-
-interface IProductList {
-  products: Product[] | undefined;
-}
+import { IProductList } from "../../types/Interfaces";
 
 const ProductList: FC<IProductList> = ({ products }) => {
   const [currentPage, setCurrentPage] = useState<number>(1);

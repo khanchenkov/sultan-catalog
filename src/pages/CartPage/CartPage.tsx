@@ -6,6 +6,7 @@ import { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
 import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import { editPrice } from "../../util/EditPrice";
 
 const CartPage = () => {
   const { cart } = useAppSelector((state) => state.productReducer);
@@ -17,14 +18,6 @@ const CartPage = () => {
     .map((el) => el.amount * el.item.price)
     .reduce((a, b) => a + b, 0);
   console.log(sum);
-
-  const editPrice = (fullPrice: number) => {
-    if (Number.isInteger(fullPrice)) {
-      return fullPrice + " ₸";
-    } else {
-      return (fullPrice.toFixed(2) + "").replace(".", ",") + " ₸";
-    }
-  };
 
   const buyCartHandler = () => {
     dispatch(clearCart());

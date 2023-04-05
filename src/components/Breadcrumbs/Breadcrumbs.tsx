@@ -1,9 +1,6 @@
 import "./Breadcrumbs.scss";
 import { FC } from "react";
-
-interface IBreadcrumbs {
-  routes: string[];
-}
+import { IBreadcrumbs } from "../../types/Interfaces";
 
 const Breadcrumbs: FC<IBreadcrumbs> = ({ routes }) => {
   return (

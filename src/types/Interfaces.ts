@@ -22,3 +22,51 @@ export interface IHeader {
   cartLength: number;
   cartSum: number;
 }
+
+export interface IProductList {
+  products: Product[] | undefined;
+}
+
+export interface IPagination {
+  productsPerPage: number;
+  totalProducts: number;
+  currentPage: number;
+  setCurrentPage: any;
+}
+
+export interface ICareTypePanel {
+  setCurrentCareType: any;
+  careTypes: string[];
+  currentCareType: string;
+}
+
+export interface IBreadcrumbs {
+  routes: string[];
+}
+
+export interface IAsideFilters {
+  setCurrentCareType: any;
+  careTypes: string[];
+  currentCareType: string;
+  currentMinPrice: string;
+  currentMaxPrice: string;
+  setCurrentMaxPrice: any;
+  setCurrentMinPrice: any;
+  currentBrands: string[];
+  setCurrentBrands: any;
+}
+
+export interface IBrandObj {
+  [key: string]: number;
+}
+
+export interface IAdminProduct {
+  item: Product;
+  removeProduct: (id: number) => void;
+  editProductItem: (product: Product) => void;
+}
+
+export interface IAddNewProduct {
+  addNewProduct: (product: Product) => void;
+  lastId: number;
+}

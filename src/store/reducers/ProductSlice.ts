@@ -5,12 +5,20 @@ interface ProductState {
   products: Product[];
   cart: CartItem[];
   cartSum: number;
+  careTypes: string[];
 }
 
 const initialState: ProductState = {
   products: [],
   cart: [],
   cartSum: 0,
+  careTypes: [
+    "Уход за телом",
+    "Уход за руками",
+    "Уход за ногами",
+    "Уход за лицом",
+    "Уход за волосами",
+  ],
 };
 
 export const productSlice = createSlice({

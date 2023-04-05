@@ -1,12 +1,6 @@
 import { FC } from "react";
 import "./Pagination.scss";
-
-interface IPagination {
-  productsPerPage: number;
-  totalProducts: number;
-  currentPage: number;
-  setCurrentPage: any;
-}
+import { IPagination } from "../../types/Interfaces";
 
 const Pagination: FC<IPagination> = ({
   productsPerPage,

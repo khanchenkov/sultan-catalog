@@ -2,22 +2,8 @@ import "./AsideFilters.scss";
 import { useState, FC } from "react";
 import { useAppSelector } from "../../hooks/redux";
 import { Product } from "../../types/Interfaces";
+import { IAsideFilters, IBrandObj } from "../../types/Interfaces";
 
-interface IAsideFilters {
-  setCurrentCareType: any;
-  careTypes: string[];
-  currentCareType: string;
-  currentMinPrice: string;
-  currentMaxPrice: string;
-  setCurrentMaxPrice: any;
-  setCurrentMinPrice: any;
-  currentBrands: string[];
-  setCurrentBrands: any;
-}
-
-interface IBrandObj {
-  [key: string]: number;
-}
 
 const AsideFilters: FC<IAsideFilters> = ({
   careTypes,

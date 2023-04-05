@@ -5,6 +5,7 @@ import { Product } from "../../types/Interfaces";
 import { useAppDispatch } from "../../hooks/redux";
 import { productSlice } from "../../store/reducers/ProductSlice";
 import defineSize from "../../util/DefineSize";
+import { editPrice } from "../../util/EditPrice";
 
 const ProductListItem: FC<Product> = (item) => {
   const navigate = useNavigate();
@@ -21,14 +22,6 @@ const ProductListItem: FC<Product> = (item) => {
     measurement_type,
     care_type,
   } = item;
-
-  const editPrice = (fullPrice: number) => {
-    if (Number.isInteger(fullPrice)) {
-      return fullPrice + " ₸";
-    } else {
-      return (fullPrice.toFixed(2) + "").replace(".", ",") + " ₸";
-    }
-  };
 
   return (
     <div className="product-list-item">
