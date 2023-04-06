@@ -1,7 +1,7 @@
 import "./CartListItem.scss";
 import { FC } from "react";
 import { CartItem } from "../../types/Interfaces";
-import defineSize from "../../util/DefineSize";
+import defineSize from "../MeasurementIcon/MeasurementIcon";
 import { useAppDispatch } from "../../hooks/redux";
 import { productSlice } from "../../store/reducers/ProductSlice";
 import { editPrice } from "../../util/EditPrice";

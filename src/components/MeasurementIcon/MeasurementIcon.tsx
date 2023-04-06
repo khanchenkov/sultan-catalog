@@ -1,4 +1,4 @@
-const defineSize = (
+const MeasurementIcon = (
   measurment: string | undefined,
   size: string | undefined,
   classname: string
@@ -42,4 +42,4 @@ const defineSize = (
   );
 };
 
-export default defineSize;
+export default MeasurementIcon;

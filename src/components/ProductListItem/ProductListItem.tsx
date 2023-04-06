@@ -4,7 +4,7 @@ import "./ProductListItem.scss";
 import { Product } from "../../types/Interfaces";
 import { useAppDispatch } from "../../hooks/redux";
 import { productSlice } from "../../store/reducers/ProductSlice";
-import defineSize from "../../util/DefineSize";
+import defineSize from "../MeasurementIcon/MeasurementIcon";
 import { editPrice } from "../../util/EditPrice";
 
 const ProductListItem: FC<Product> = (item) => {

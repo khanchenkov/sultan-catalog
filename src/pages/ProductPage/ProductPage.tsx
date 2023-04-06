@@ -4,7 +4,7 @@ import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import { productSlice } from "../../store/reducers/ProductSlice";
 import { useAppSelector, useAppDispatch } from "../../hooks/redux";
 import { Product } from "../../types/Interfaces";
-import defineSize from "../../util/DefineSize";
+import defineSize from "../../components/MeasurementIcon/MeasurementIcon";
 import { useState } from "react";
 import Header from "../../components/Header/Header";
 import Footer from "../../components/Footer/Footer";
