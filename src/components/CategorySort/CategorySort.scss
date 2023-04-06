@@ -53,3 +53,36 @@
     }
   }
 }
+
+@media screen and (max-width: 992px) {
+  .category-sort {
+    &__wrapper {
+      h2 {
+        font-size: 30px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .category-sort {
+    &__wrapper {
+      h2 {
+        font-size: 24px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 615px) {
+  .category-sort {
+    &__wrapper {
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      h2 {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}

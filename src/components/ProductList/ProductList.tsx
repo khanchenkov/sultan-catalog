@@ -16,7 +16,7 @@ const ProductList: FC<IProductList> = ({ products }) => {
 
   return (
     <div>
-      <div className="prodcut-list">
+      <div className="product-list">
         {products &&
           currentProducts.map((item: Product) => (
             <ProductListItem key={item.id} {...item} />

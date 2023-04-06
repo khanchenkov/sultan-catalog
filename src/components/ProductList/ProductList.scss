@@ -1,6 +1,18 @@
-.prodcut-list {
+.product-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
   margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1350px) {
+  .product-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 998px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
 }

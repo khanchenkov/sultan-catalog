@@ -1,8 +1,11 @@
 import "./HeaderMobile.scss";
 import { IHeader } from "../../types/Interfaces";
 import { FC } from "react";
+import { useNavigate } from "react-router-dom";
 
 const HeaderMobile: FC<IHeader> = ({ cartLength, cartSum }) => {
+  const navigate = useNavigate();
+
   return (
     <div className="header__mobile">
       <div className="container">
@@ -38,7 +41,7 @@ const HeaderMobile: FC<IHeader> = ({ cartLength, cartSum }) => {
             </defs>
           </svg>
 
-          <div className="header__cart cart">
+          <div className="header__cart cart" onClick={() => navigate("/cart")}>
             <div className="cart__icon">
               <svg
                 width={41}

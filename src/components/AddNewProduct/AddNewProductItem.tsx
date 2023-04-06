@@ -6,7 +6,6 @@ import { IAddNewProduct } from "../../types/Interfaces";
 
 const AddNewProductItem: FC<IAddNewProduct> = ({ addNewProduct, lastId }) => {
   const { careTypes } = useAppSelector((state) => state.productReducer);
-
   const [imageUrl, setImageUrl] = useState<string>("");
   const [productName, setProductName] = useState<string>("");
   const [brandName, setBrandName] = useState<string>("");
@@ -17,7 +16,6 @@ const AddNewProductItem: FC<IAddNewProduct> = ({ addNewProduct, lastId }) => {
   const [productSize, setProductSize] = useState<string>("");
   const [productDescription, setProductDescription] = useState<string>("");
   const [productCareTypes, setProductCareTypes] = useState<string[]>([]);
-
   const [validationError, setValidationError] = useState<boolean>(false);
 
   const addCareTypeToList = (e: any, careType: string) => {
@@ -28,19 +26,19 @@ const AddNewProductItem: FC<IAddNewProduct> = ({ addNewProduct, lastId }) => {
     }
   };
 
-  const validated =
-    imageUrl &&
-    productName &&
-    brandName &&
-    productPrice &&
-    productManufacturer &&
-    productBarcode &&
-    measurementType &&
-    productSize &&
-    productDescription &&
-    productCareTypes.length > 0;
-
   const saveChanges = () => {
+    const validated =
+      imageUrl &&
+      productName &&
+      brandName &&
+      productPrice &&
+      productManufacturer &&
+      productBarcode &&
+      measurementType &&
+      productSize &&
+      productDescription &&
+      productCareTypes.length > 0;
+
     if (!validated) {
       setValidationError(true);
       return;
