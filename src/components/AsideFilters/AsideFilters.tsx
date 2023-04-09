@@ -85,7 +85,9 @@ const AsideFilters: FC<IAsideFilters> = ({
       </div>
 
       <div className="aside-filters__manufacturer-filter manufacturer-filter">
+
         <h4>Производитель</h4>
+        
         <div className="manufacturer-filter__search-input">
           <input
             type="text"
@@ -109,6 +111,7 @@ const AsideFilters: FC<IAsideFilters> = ({
             </svg>
           </button>
         </div>
+
         <div className="manufacturer-filter__list">
           <ul>
             {allBrands.map((item, i) => (

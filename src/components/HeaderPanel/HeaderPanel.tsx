@@ -105,7 +105,7 @@ const HeaderPanel: FC<IHeader> = ({ cartLength, cartSum }) => {
             />
           </svg>
           <div className="cart__counter">
-            <div>{cartLength}</div>
+            <div role="contentinfo">{cartLength}</div>
           </div>
         </div>
         <div className="cart__sum">

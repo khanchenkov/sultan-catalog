@@ -66,7 +66,7 @@ const ProductPage = () => {
                   currentProduct?.size,
                   "product-page"
                 )}
-                <div className="product-page__buy">
+                <div className="product-page__buy" role="dialog">
                   <p>
                     {amount > 0 &&
                       currentProduct &&

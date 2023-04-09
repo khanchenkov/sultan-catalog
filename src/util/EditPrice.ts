@@ -5,3 +5,4 @@ export const editPrice = (fullPrice: number) => {
     return (fullPrice.toFixed(2) + "").replace(".", ",") + " ₸";
   }
 };
+  
